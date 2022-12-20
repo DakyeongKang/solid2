@@ -1,0 +1,5 @@
+sonar.projectKey=swlabs:solid
+sonar.projectName=solid
+sonar.sources=python_code
+sonar.language=py
+sonar.login=tokenxxxxd744771fbe2eb75407b4523ae6f5336dac6
