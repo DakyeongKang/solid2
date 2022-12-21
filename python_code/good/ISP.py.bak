@@ -8,12 +8,16 @@
 from abc import ABCMeta, abstractmethod
 import time
 
-class Workable(object, metaclass=ABCMeta):
+class Workable(object):
+    __metaclass__ = ABCMeta
+
     @abstractmethod
     def work(self):
         pass
 
-class Eatable(object, metaclass=ABCMeta):
+class Eatable(object):
+    __metaclass__ = ABCMeta
+
     @abstractmethod
     def eat(self):
         pass
@@ -67,7 +71,7 @@ class BreakManager(Manager):
 class Robot(Workable):
 
     def work(self):
-        print("I'm a robot. I'm working....")
+        print "I'm a robot. I'm working...."
 
     # No need for implementation of `eat` which is not neccessary for a `Robot`. 
 
@@ -93,7 +97,7 @@ def main():
     try:
         break_manager.set_worker(Robot())
         break_manager.lunch_break()
-    except KeyboardInterrupt:
+    except:
         pass
     
 if __name__ == '__main__':
